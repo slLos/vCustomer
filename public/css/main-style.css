@@ -1,0 +1,327 @@
+.sidebar .nav li > a,
+.off-canvas-sidebar .nav li > a {
+  color: #dadada !important;
+}
+
+.sidebar .nav li > a:focus,
+.off-canvas-sidebar .nav li > a:focus {
+    background-color: rgba(238, 238, 238, 0.18);
+}
+
+
+.ps:hover>.ps__scrollbar-y-rail:hover {
+    background-color: transparent !important;
+    opacity: .9;
+}
+
+.ps>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y, .ps>.ps__scrollbar-y-rail:active>.ps__scrollbar-y {
+    width: 8px;
+}
+
+.sidebar[data-color="custom"] .nav li.active a,
+.off-canvas-sidebar[data-color="custom"] .nav li.active a {
+  background-color: rgb(35, 84, 134);
+  box-shadow: 0 8px 10px -10px rgba(35, 84, 134, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(35, 84, 134, 0.2);
+}
+
+.sidebar .user, .off-canvas-sidebar .user {
+    padding-bottom: 20px;
+    margin: 20px auto 0;
+    position: relative;
+}
+
+.sidebar .user .photo, .off-canvas-sidebar .user .photo {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .user:after, .off-canvas-sidebar .user:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(180, 180, 180, 0.3);
+}
+
+.sidebar .info {
+	text-align: center;
+}
+
+.sidebar .info a {
+	color: #fff !important;
+}
+
+.sidebar .nav .caret, .off-canvas-sidebar .nav .caret {
+    margin-top: 13px !important;
+    position: absolute !important;
+    right: 18px !important;
+}
+
+.dropdown-nav {
+	margin-top: 0px !important;
+}
+
+.dropdown-nav li a{
+	    padding-left: 60px !important;
+}
+
+.message {
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    padding: 20px 15px;
+    line-height: 20px;
+    margin: 0px 15px 20px;
+}
+.message.error {
+    background-color: #f55a4e;
+    color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+}
+
+.message.success {
+    background-color: #5cb860;
+    color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
+}
+
+.card {
+    padding: 0 10px !important;
+}
+.card [data-background-color="custom"] {
+    background-color: rgb(31, 116, 204) !important;
+    box-shadow: 0 8px 10px -10px rgba(35, 84, 134, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(35, 84, 134, 0.2);
+}
+
+
+.form-control, .form-group .form-control {
+    border: 0;
+    background-image: linear-gradient(rgb(31, 116, 204), rgb(31, 116, 204)), linear-gradient(#D2D2D2, #D2D2D2) !important;
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: transparent;
+    transition: background 0s ease-out;
+    float: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-weight: 400;
+}
+
+
+@media (max-width: 991px) {
+	.navbar-form {
+		margin: 10px 0px !important;
+	    float: none !important;
+	    padding-top: 1px;
+	    padding-bottom: 1px !important;
+	    position: relative !important;
+	}
+
+	.navbar-form .btn {
+	    position: absolute;
+	    top: 12px !important;
+	    right: 15px !important;
+	}
+
+	.form-group .form-control {
+	    font-size: 1.7em;
+	    height: 37px;
+	    width: 78% !important;
+	}
+
+	.sidebar .user:after, .off-canvas-sidebar .user:after {
+	    content: '';
+	    height: 0px !important;
+
+	}
+}
+
+.blocoInvisivel {
+    visibility: hidden !important;
+}
+
+.checkbox label {
+    color: rgba(12, 12, 12, 0.63) !important;
+}
+
+.btn.btn-custom,
+.navbar .navbar-nav > li > a.btn.btn-custom {
+  box-shadow: 0 8px 10px -10px rgba(35, 84, 134, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(35, 84, 134, 0.2);
+}
+.btn.btn-custom, .btn.btn-custom:hover, .btn.btn-custom:focus, .btn.btn-custom:active, .btn.btn-custom.active, .btn.btn-custom:active:focus, .btn.btn-custom:active:hover, .btn.btn-custom.active:focus, .btn.btn-custom.active:hover, .open > .btn.btn-custom.dropdown-toggle, .open > .btn.btn-custom.dropdown-toggle:focus, .open > .btn.btn-custom.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-custom,
+.navbar .navbar-nav > li > a.btn.btn-custom:hover,
+.navbar .navbar-nav > li > a.btn.btn-custom:focus,
+.navbar .navbar-nav > li > a.btn.btn-custom:active,
+.navbar .navbar-nav > li > a.btn.btn-custom.active,
+.navbar .navbar-nav > li > a.btn.btn-custom:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-custom:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-custom.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-custom.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-custom.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-custom.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-custom.dropdown-toggle:hover {
+  background-color: rgb(31, 116, 204) !important;
+  color: #FFFFFF;
+}
+.btn.btn-custom:focus, .btn.btn-custom:active, .btn.btn-custom:hover,
+.navbar .navbar-nav > li > a.btn.btn-custom:focus,
+.navbar .navbar-nav > li > a.btn.btn-custom:active,
+.navbar .navbar-nav > li > a.btn.btn-custom:hover {
+  box-shadow: 0 8px 10px -10px rgba(35, 84, 134, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(35, 84, 134, 0.2);
+}
+.btn.btn-custom.disabled, .btn.btn-custom.disabled:hover, .btn.btn-custom.disabled:focus, .btn.btn-custom.disabled.focus, .btn.btn-custom.disabled:active, .btn.btn-custom.disabled.active, .btn.btn-custom:disabled, .btn.btn-custom:disabled:hover, .btn.btn-custom:disabled:focus, .btn.btn-custom:disabled.focus, .btn.btn-custom:disabled:active, .btn.btn-custom:disabled.active, .btn.btn-custom[disabled], .btn.btn-custom[disabled]:hover, .btn.btn-custom[disabled]:focus, .btn.btn-custom[disabled].focus, .btn.btn-custom[disabled]:active, .btn.btn-custom[disabled].active, fieldset[disabled] .btn.btn-custom, fieldset[disabled] .btn.btn-custom:hover, fieldset[disabled] .btn.btn-custom:focus, fieldset[disabled] .btn.btn-custom.focus, fieldset[disabled] .btn.btn-custom:active, fieldset[disabled] .btn.btn-custom.active,
+.navbar .navbar-nav > li > a.btn.btn-custom.disabled,
+.navbar .navbar-nav > li > a.btn.btn-custom.disabled:hover,
+.navbar .navbar-nav > li > a.btn.btn-custom.disabled:focus,
+.navbar .navbar-nav > li > a.btn.btn-custom.disabled.focus,
+.navbar .navbar-nav > li > a.btn.btn-custom.disabled:active,
+.navbar .navbar-nav > li > a.btn.btn-custom.disabled.active,
+.navbar .navbar-nav > li > a.btn.btn-custom:disabled,
+.navbar .navbar-nav > li > a.btn.btn-custom:disabled:hover,
+.navbar .navbar-nav > li > a.btn.btn-custom:disabled:focus,
+.navbar .navbar-nav > li > a.btn.btn-custom:disabled.focus,
+.navbar .navbar-nav > li > a.btn.btn-custom:disabled:active,
+.navbar .navbar-nav > li > a.btn.btn-custom:disabled.active,
+.navbar .navbar-nav > li > a.btn.btn-custom[disabled],
+.navbar .navbar-nav > li > a.btn.btn-custom[disabled]:hover,
+.navbar .navbar-nav > li > a.btn.btn-custom[disabled]:focus,
+.navbar .navbar-nav > li > a.btn.btn-custom[disabled].focus,
+.navbar .navbar-nav > li > a.btn.btn-custom[disabled]:active,
+.navbar .navbar-nav > li > a.btn.btn-custom[disabled].active, fieldset[disabled]
+.navbar .navbar-nav > li > a.btn.btn-custom, fieldset[disabled]
+.navbar .navbar-nav > li > a.btn.btn-custom:hover, fieldset[disabled]
+.navbar .navbar-nav > li > a.btn.btn-custom:focus, fieldset[disabled]
+.navbar .navbar-nav > li > a.btn.btn-custom.focus, fieldset[disabled]
+.navbar .navbar-nav > li > a.btn.btn-custom:active, fieldset[disabled]
+.navbar .navbar-nav > li > a.btn.btn-custom.active {
+  box-shadow: none;
+}
+.btn.btn-custom.btn-simple,
+.navbar .navbar-nav > li > a.btn.btn-custom.btn-simple {
+  background-color: transparent;
+  color: #9c27b0;
+  box-shadow: none;
+}
+.btn.btn-custom.btn-simple:hover, .btn.btn-custom.btn-simple:focus, .btn.btn-custom.btn-simple:active,
+.navbar .navbar-nav > li > a.btn.btn-custom.btn-simple:hover,
+.navbar .navbar-nav > li > a.btn.btn-custom.btn-simple:focus,
+.navbar .navbar-nav > li > a.btn.btn-custom.btn-simple:active {
+  background-color: transparent;
+  color: #9c27b0;
+}
+
+/* plugins css replace */
+.select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: none !important;
+    border-bottom: 1px solid #aaa !important;
+    border-radius: 0 !important;
+    cursor: text;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+     border: 0 !important;  
+     cursor: default; 
+     float: left;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    cursor: pointer !important; 
+    margin: 5px 3px 5px 0 !important; ;
+    position: relative;
+    padding: 3px 8px !important; ;
+    border-radius: 12px !important; 
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1.5em;
+    padding-left: 0.8em !important;
+    background-color: #6e2d79 !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #999 !important;
+
+}
+
+.card .icon-groupR {
+    width: 20%;
+    display: inline-block;
+    float: right;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: -6px;
+}
+
+.card .icon-groupR i{
+    font-size: 38px;
+}
+
+.table-btn {
+    padding: 0px 0px !important;
+    margin: 0px 1px !important;
+}
+
+.nav-center {
+    text-align: center !important;
+}
+
+.nav-pills {
+    display: inline-block !important;
+}
+
+.card-header-panel {
+    padding: 10px 15px 0;
+}
+
+.card-header-panel .card-title {
+    margin-bottom: 2px !important;
+}
+
+.limit-pane .card {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.nav-pills.nav-pills-warning > li.active > a, .nav-pills.nav-pills-warning > li.active > a:focus, .nav-pills.nav-pills-warning > li.active > a:hover {
+    background-color: rgb(31, 116, 204) !important;
+    box-shadow: 0 12px 20px -10px rgba(4, 0, 255, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 43, 255, 0.2);
+}
+
+.pagination > li > a, .pagination > li > span {
+    border: 0 !important;
+    border-radius: 30px !important;
+    transition: all .3s !important;
+    padding: 0px 11px !important;
+    margin: 0 3px !important;
+    min-width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    color: #999999 !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    background: transparent !important;
+}
+
+.pagination > .active > a, .pagination.pagination-info > .active > a:focus, .pagination.pagination-info > .active > a:hover, .pagination.pagination-info > .active > span, .pagination.pagination-info > .active > span:focus, .pagination.pagination-info > .active > span:hover {
+    background-color: #00bcd4 !important;
+    border-color: #00bcd4 !important;
+    color: #fff !important;
+}
+
+.modal-content {
+    z-index: 99999 !important;
+}
