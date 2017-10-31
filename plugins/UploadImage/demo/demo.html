@@ -1,0 +1,59 @@
+<html>
+<head>
+<link href="../css/uploadfile.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../js/jquery.uploadfile.js"></script>
+</head>
+<body>
+<div id="fileuploader">Upload</div>
+
+<div id="extrabutton" class="ajax-file-upload-green">Enviar Fotos</div>
+
+<script>
+$(document).ready(function() {
+	var extraObj = $("#fileuploader").uploadFile({
+		url:"../php/upload.php",
+		dragDrop: true,
+		fileName: "myfile",
+		returnType: "json",
+		showDelete: true,
+		showPreview:true,
+		statusBarWidth:600,
+		dragdropWidth:600,
+		previewHeight: "100px",
+ 		previewWidth: "100px",
+		deleteCallback: function (data, pd) {
+		    for (var i = 0; i < data.length; i++) {
+		        $.post("../php/delete.php", 
+		        	{
+		        		op: "delete",
+		        		name: data[i]
+		        	},
+		            function (resp,textStatus, jqXHR) {
+		                //Show Message	
+		                alert("File Deleted");
+		            });
+		    }
+		    pd.statusbar.hide(); //You choice.
+
+		},
+		extraHTML:function()
+		{
+			var codProduto = $("#codProduto").val();
+		    var html = "";
+			html += "<b>File Tags:</b><input type='text' name='temp[]' value='"+codProduto+"' /> <br/>";
+			return html;    		
+		},
+		autoSubmit:false
+	});
+
+	$("#extrabutton").click(function()
+	{
+		extraObj.startUpload();
+	});
+
+});
+</script>
+</body>
+</html>
+
