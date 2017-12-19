@@ -47,6 +47,7 @@ class AppController extends Controller
         $this->loadComponent('Menu');
         $this->loadComponent('Access');
         $this->loadComponent('Csrf');
+        $this->loadComponent('Grids');
 
         $this->set('groupName', 'Oficina de Serviços');
 

@@ -39,6 +39,7 @@ class UsersController extends AppController
     {
         parent::initialize();
         $this->loadComponent('Paginator');
+        $this->loadComponent('Users');
 
         $this->set('sectionName', 'Usuários');
         $this->set('sectionSubtitle', '');
@@ -54,7 +55,7 @@ class UsersController extends AppController
 
     public function login() {
     	$this->viewBuilder()->layout('login');
-
+        $usersTable = TableRegistry::get('Users');
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
@@ -62,10 +63,10 @@ class UsersController extends AppController
 
                 // Ultima visita
                 $codUser = $this->Auth->User('ID_USUARIO_USU');
-                $userEntity = $this->Users->get($codUser);
+                $userEntity = $usersTable->get($codUser);
                 $userEntity->DT_ULTIMOLOGIN_USU = date("Y-m-d H:i:s");
 
-                $this->Users->save($userEntity);
+                $usersTable->save($userEntity);
 
                 return $this->redirect($this->Auth->redirectUrl());
             }
@@ -77,26 +78,32 @@ class UsersController extends AppController
 
     public function index()
     {  
-        $users = $this->Users->find('all');
+        $usersTable = TableRegistry::get('Users');
+        $users = $usersTable->find('all');
 
         $this->set('users', $this->paginate($users));
+
+        $gridUsers = clone $this->Users;
+        $gridUsers->setData($this->paginate($users));
+        $this->set('grid', $gridUsers->toString());
     }
 
     public function view($id)
     {
-        $user = $this->Users->get($id);
+        $usersTable = TableRegistry::get('Users');
+        $user = $usersTable->get($id);
         $this->set(compact('user'));
     }
 
     public function post()
     {
         $opcoesTable = TableRegistry::get('UsuariosAcessos');
-
-        $user = $this->Users->newEntity();
+        $usersTable = TableRegistry::get('Users');
+        $user = $usersTable->newEntity();
         if ($this->request->is('post')) {
 
-            $user = $this->Users->patchEntity($user, $this->request->data);
-            if ($this->Users->save($user)) {
+            $user = $usersTable->patchEntity($user, $this->request->data);
+            if ($usersTable->save($user)) {
 
                 if(count($this->request->data['ACESSSOS']) > 0) {
                     foreach ($this->request->data['ACESSSOS'] as $acesso) {
@@ -124,7 +131,7 @@ class UsersController extends AppController
     public function put($id = null)
     {
         $this->set('sectionSubtitle', 'Atualizar Usuário');
-
+        $usersTable = TableRegistry::get('Users');
         $opcoesTable = TableRegistry::get('UsuariosAcessos');
         $opcoes = $opcoesTable ->find()
             ->select('NM_ACESSO_ACE')
@@ -135,13 +142,13 @@ class UsersController extends AppController
             $arOpcoes[$key] = $value['NM_ACESSO_ACE'];
         }
 
-        $user = $this->Users->get($id);
+        $user = $usersTable->get($id);
 
         if ($this->request->is(['post', 'put'])) {
 
-            $user = $this->Users->patchEntity($user, $this->request->data);
+            $user = $usersTable->patchEntity($user, $this->request->data);
 
-            if ($this->Users->save($user)) {
+            if ($usersTable->save($user)) {
                 $this->Log->newLog('change', 'Usuário '. $user->username . ' alterado.');
                 $this->Flash->success('Usuário atualizado com sucesso.', [
                     'key' => 'call'
@@ -163,12 +170,12 @@ class UsersController extends AppController
     {
         $this->autoRender = false;
 
-
+        $usersTable = TableRegistry::get('Users');
         if ($this->request->is(['post', 'put'])) 
         {
             $id =  $this->request->data['id'];
 
-            $query = $this->Users->query();
+            $query = $usersTable->query();
             $query->delete()
                 ->where(['codUser' => $id])
                 ->execute();
@@ -193,7 +200,7 @@ class UsersController extends AppController
 
     public function postPerfil() {
     	$acessos = $this->Access->getAcessosLista();
-
+        $usersTable = TableRegistry::get('Users');
     	$perfisTable = TableRegistry::get('Perfil');
     	$opcoesTable = TableRegistry::get('PerfilOpcao');
 
@@ -239,7 +246,7 @@ class UsersController extends AppController
     public function putPerfil($id = null)
     {
         $this->set('sectionSubtitle', 'Atualizar Perfil');
-
+        $usersTable = TableRegistry::get('Users');
         $perfisTable = TableRegistry::get('Perfil');
     	$opcoesTable = TableRegistry::get('PerfilOpcao');
 

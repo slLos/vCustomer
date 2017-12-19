@@ -54,14 +54,14 @@ $cakeDescription = 'Agenda';
       -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text">
-          Oficina de serviços
+          v-Customer
         </a>
       </div>
 
       <div class="sidebar-wrapper">
         <div class="user">
           <div class="photo">
-              <img src="https://scontent.fgru3-1.fna.fbcdn.net/v/t1.0-9/17884251_1754776054537398_3392479789345023046_n.jpg?oh=3440f2f8bdd6124aa749beb6c9362ea9&oe=59BF1A1E" class="img-responsive">
+              <img src="https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/21768387_1985619721453029_3782771873494451494_n.jpg?oh=c4bd59db351564c14c8d7acd99037c0b&oe=5A791ADD" class="img-responsive">
           </div>
           <div class="info">
             <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="false">
